@@ -1,3 +1,1 @@
-from (print(12))
-def (122
-    )
+print('hello everywhere')
