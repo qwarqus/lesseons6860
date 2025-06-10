@@ -22,7 +22,7 @@ if answer == "2":
 
 if answer == "3":
     key = input("Введіть ім'я для видалення: ")
-    removed = phonenumber.pop(key)
+    answer = phonenumber.pop(key)
     if removed:
         print(f'Контакт {key} видалено.')
     else:
