@@ -20,9 +20,9 @@ while True:
         break
     if start == '3':
         n_w = input('чудово введіть імя виконавця: ').lower()
-        workers[n_w] = [n_w]
+        workers.get(n_w) == n_w
         n_wp = input('чудово введіть його професію: ').lower()
-        workers[n_w] = n_wp
+        workers.get(n_w) == n_wp
         n_work = input('введіть роботу для вашого виконавця ').lower()
         works.append(n_work)
 
@@ -31,12 +31,12 @@ while True:
 
     elif start == '1':
         print(workers)
-        dibilchik = input('''введіть імя виконавця яке було подане
+        robitnik = input('''введіть імя виконавця яке було подане
         також ви можете вибрати рандомного виконавця введячи команду (рандом): ''').lower()
 
         robota = input(f'''{print(works)}
-        введіть роботу (вона позначена вище) яку буде виконувати робітник''').lower()
-        if dibilchik == 'рандом':
+        введіть роботу (вона позначена вище) яку буде виконувати робітник ''').lower()
+        if robitnik == 'рандом':
             asd = r.choice(list(workers.keys()))
             print(f'{asd} => ваш робітник')
             ddd = r.randint(1, 3)
@@ -44,45 +44,44 @@ while True:
                 print(f'{asd} успішно справився з поданою вами роботою {robota} ')
             else:
                 print(f'{asd} провалив вашу роботу ({robota}) ')
-
-        if dibilchik == 'андрій' and robota == 'зробити вакцину':
+        if robitnik == 'андрій' and robota == 'зробити вакцину':
             print('Чудово! Андрій — чудовий біолог, він швидко зробить вакцину.')
-        elif dibilchik == 'андрій':
+        elif robitnik == 'андрій':
             asd = r.randint(1, 4)
             if asd == 1:
                 print('Андрій чудово справився із роботою не його професії.')
             else:
                 print('Андрій провалив своє завдання.')
 
-        if dibilchik == 'боб' and robota == 'збудувати будинок':
+        if robitnik == 'боб' and robota == 'збудувати будинок':
             print('Чудово! Боб — чудовий будівельник, він швидко збудує будинок.')
-        elif dibilchik == 'боб':
+        elif robitnik == 'боб':
             asd = r.randint(1, 4)
             if asd == 1:
                 print('Боб чудово справився із роботою не його професії.')
             else:
                 print('Боб провалив своє завдання.')
 
-        if dibilchik == 'ванюша' and robota == 'прибирання':
+        if robitnik == 'ванюша' and robota == 'прибирання':
             print('Чудово! Ванюша — чудовий прибиральник, він швидко поприбирає.')
-        elif dibilchik == 'ванюша':
+        elif robitnik == 'ванюша':
             asd = r.randint(1, 4)
             if asd == 1:
                 print('Ванюша чудово справився із роботою не його професії.')
             else:
                 print('Ванюша провалив своє завдання.')
 
-        if dibilchik == 'анджелла' and robota == 'провести урок':
+        if robitnik == 'анджелла' and robota == 'провести урок':
             print('Чудово! Анджелла чудова вчителька, вона швидко проведе урок.')
-        elif dibilchik == 'анджелла':
+        elif robitnik == 'анджелла':
             asd = r.randint(1, 4)
             if asd == 1:
                 print('Анджелла чудово справивлася із роботою не її професії.')
             else:
                 print('Анджелла провалила своє завдання.')
-        if dibilchik == f'{n_w}' and robota == f'{n_work}':
+        if robitnik == f'{n_w}' and robota == f'{n_work}':
             print(f'Ваш {n_w} чудовий {n_wp}, тому він з легкістю виконав завдання під назвою: {robota}')
-        elif dibilchik == f'{n_w}':
+        elif robitnik == f'{n_w}':
             asd = r.randint(1, 4)
             if asd == 1:
                 print(f'{n_w} виконав завдання завдання')
