@@ -81,10 +81,10 @@ while True:
             else:
                 print('Анджелла провалила своє завдання.')
         if dibilchik == f'{n_w}' and robota == f'{n_work}':
-            print(f'ваш працівник справився із роботою' )
+            print(f'Ваш {n_w} чудовий {n_wp}, тому він з легкістю виконав завдання під назвою: {robota}')
         elif dibilchik == f'{n_w}':
             asd = r.randint(1, 4)
             if asd == 1:
-                print(f'{n_w} виконав завдання')
+                print(f'{n_w} виконав завдання завдання')
             else:
                 print(f'{n_w} провалив завдання')
