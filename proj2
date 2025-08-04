@@ -171,7 +171,7 @@ def program():
     def SKAM():
         story_text.config(text='Тебе заскамили на гроші як мамонта')
         knopka1.config(text='вийти', command=root.destroy)
-        knopka2.config(text='переграти', command=ggmenu)
+        knopka2.config(text='переграти', command=root.destroy)
 
     def js():
         story_text.config(text='Тобі попався хороший вчитель який навчав тебе програмуванню\n що будеш робити')
