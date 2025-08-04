@@ -18,12 +18,12 @@ def mine():
 
     def shaxta_smert():
         story_text.config(text='ззаді підійшов кріпер та взірвав тебе,')
-        knopka1.destroy()
+        knopka1.config(text='вийти з гри', command=root.destroy)
         knopka2.config(text='вийти з гри', command=root.destroy)
 
     def smert():
         story_text.config(text='ти не справився з мобами і загинув,')
-        knopka1.destroy()
+        knopka1.config(text='вийти з гри', command=root.destroy)
         knopka2.config(text='вийти з гри', command=root.destroy)
 
     def livo():
