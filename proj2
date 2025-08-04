@@ -1,0 +1,279 @@
+import tkinter as tk
+
+
+
+
+
+
+
+
+
+
+
+def mine():
+    story_text.config(text="""Ти з'явився в світі майнкрафту перед тобою поставлена табличка на якій написано
+    'на ліво підеш смерть знайдеш
+    на право підеш алмази знайдеш'
+     отже, куди ти підеш? """, font=("Times New Roman", 16, ))
+
+    def shaxta_smert():
+        story_text.config(text='ззаді підійшов кріпер та взірвав тебе,')
+        knopka1.destroy()
+        knopka2.config(text='вийти з гри', command=root.destroy)
+
+    def smert():
+        story_text.config(text='ти не справився з мобами і загинув,')
+        knopka1.destroy()
+        knopka2.config(text='вийти з гри', command=root.destroy)
+
+    def livo():
+        story_text.config(text=(
+            'ти потрапив на арену з мобами, що будеш робити? \nP.s перед тобою є сундук з алмазную бронею та мечем'))
+        knopka1.config(text='візьму спорядження з сундука та начну битися з мобами.', command=smert)
+        knopka2.config(text='візьму спорядження з сундука, та піду в шахту.', command=almaz_shaxta)
+
+    def pravo():
+        story_text.config(text='Чудово ти опинився в шахті, що будеш робити?')
+        knopka1.config(text='піду в шахту та знайду алмази.', command=shaxta_smert)
+        knopka2.config(text='мені страшно піду назад', command=mine)
+
+    def almaz_shaxta():
+        story_text.config(text="Прекрасно ти пішов в шахту та тепер можеш спуститися в неї\n що будеш робити")
+        knopka1.config(text='Піду в шахту та знайду алмази.', command=almaziiiii)
+        knopka2.config(text='Звісно ж піду в шахту та знайду алмази.', command=almaziiiii)
+
+    def almaziiiii():
+        story_text.config(
+            text="На твоєму шляху з'явився кріпер але ти знищив його. \n пройшовши далі ти знайшов алмази!!!!!!\n\n що будеш робити? ", font=("Times New Roman", 16, ))
+        knopka1.config(text='вийти з гри', command=root.destroy)
+        knopka2.config(text='вийти з гри', command=root.destroy)
+
+    knopka1.config(text="Піду на ліво", command=livo, font=("Times New Roman", 16, ))
+    knopka2.config(text="Піду на право", command=pravo, font=("Times New Roman", 16, ))
+
+def dota():
+    def wiin():
+        story_text.config(text='Ти успішно зламав трон ворогам')
+        knopka1.config(text='вийти', command=root.destroy)
+        knopka2.config(text='вийти', command=root.destroy)
+
+    def solo():
+        story_text.config(text='Ти нафідив по міду 23 рази\n що будеш  робити?')
+        knopka1.config(text='вийти з гри', command=root.destroy)
+        knopka2.config(text='вийти з гри', command=root.destroy)
+
+    def gang():
+        story_text.config(text='Ти успішно прогангав лінії, що будеш робити')
+        knopka1.config(text='Піду пушити по міду', command=solo)
+        knopka2.config(text='Піду пушити по міду з тімою', command=wiin)
+
+    def ruin():
+        story_text.config(
+            text='Ти купив мом та половину башера,\n (це було на 40хв коли тобі ломали бараки), \nщо будеш робити')
+        knopka1.config(text='вийти з гри', command=root.destroy)
+        knopka2.config(text='вийти з гри', command=root.destroy)
+
+    def pudge1():
+        story_text.config(
+            text='що ж, ти обрав Pudge`a та пішов в мід,\n проти тебе стояв Void spirit \nщо будеш роботи?')
+        knopka1.config(text='буду аккуратно стояти лайн та добивати кріпів', command=pudge2)
+        knopka2.config(text='буду грати агресивно та куплю башер, мом, аганім', command=ruin)
+
+    def pudge2():
+        story_text.config(text='Ти відстояв шедеврально лайн та на 10хв у тебе було 10к нетворса')
+        knopka1.config(text='Що ж потрібно піти гангати лайни тому що войда спіріта немає на лайні', command=gang)
+        knopka2.config(text='Піду фармити ворожий ліс', command=lis)
+
+    def lis():
+        story_text.config(text='Ти пішов фармити, але щось не вийшло і до 27хв в тебе було 0/15/2')
+        knopka1.config(text='вийти з гри', command=root.destroy)
+        knopka2.config(text='вийти з гри', command=root.destroy)
+
+    def am():
+        story_text.config(
+            text='Тобі випав герой anti-mage, ти пішов на ізі лайн\n проти тебе попався лайн для крутих\n (вайпер и веник)')
+        knopka1.config(text='піду фідити по міду', command=solo)
+        knopka2.config(text='буду стояти лайн і фармити', command=am1)
+
+    def am1():
+        story_text.config(text='ти вифармив бф до 12 тому що проти тебе попався\n не лайн для крутих\nа тотальний фід')
+        knopka1.config(text='піду бити ліс', command=am2)
+        knopka2.config(text='буду грати активно та спліт-пушити лайни', command=am3)
+
+    def am2():
+        story_text.config(text='Ти пішов в ліс і до 25 тобі вже ломали бараки\nщо будеш робити')
+        knopka1.config(text='вийти з гри', command=root.destroy)
+        knopka2.config(text='вийти з гри', command=root.destroy)
+
+    def am3():
+        story_text.config(text='ти грав активно і набирив кілів\nчерез сплітпуш ви спушили всі т2 тавера\nна 28хв')
+        knopka1.config(text='піду заберу рошана', command=ros)
+        knopka2.config(text='піду заколю файт в нашому лісі', command=fight)
+
+    def ros():
+        story_text.config(
+            text='ви забрали рошата\nале в вас влетів ворошит storm spirin який\n зробив рампагу та вкрав аегіс')
+        knopka1.config(text='вийти з гри тому що зламали трон', command=root.destroy)
+        knopka2.config(text='вийти з гри тому що зламали трон', command=root.destroy)
+
+    def fight():
+        story_text.config(text='Ви виграли файт та пішли ломати трон')
+        knopka1.config(text='вийти з гри', command=root.destroy)
+        knopka2.config(text='вийти з гри', command=root.destroy)
+
+    story_text.config(text="що ж, ти знайшов гру, кого обереш????", font=("Comfortaa", 16, ) )
+    knopka1.config(text='не знаю нажму рандом', command=am, font=("Comfortaa", 16, ))
+    knopka2.config(text='звісно такого героя як PUDGE!!', command=pudge1, font=("Comfortaa", 16, ))
+
+
+
+def program():
+    def garage():
+        story_text.config(text='Ти пішов з пацанами за каражі\nщо будеш робити?')
+        knopka1.config(text='Пити пиво', command=lose)
+        knopka2.config(text='Курити', command=lose)
+
+    def lose():
+        story_text.config(text='Ввечері тобі стало погано\nти заснув і не прокинувся:(')
+        knopka1.config(text='Зробити вивід', command=root.destroy)
+        knopka2.config(text='Зробити вивід', command=root.destroy)
+
+    def sk():
+        story_text.config(text='Чудово ти вибрав гризти граніт науки\nщо будеш вивчати?')
+        knopka1.config(text='програмування', command=program)
+        knopka2.config(text='Українську мову', command=mova)
+
+    def mova():
+        story_text.config(text='Ти записався до репетитора української мови,\n тепер треба вибрати шлях')
+        knopka1.config(text='Буду використовувати свої знаня в цілях мовознавства\n та буду старатися, \n і переоформлю шкільну программу', command=skk)
+        knopka2.config(text='зайду в доту', command=Dota)
+
+    def skk():
+        story_text.config(text='Ти проявив себе як видатного науковця\n та отримав нобелівську премію')
+        knopka1.config(text='УРААА!!', command=root.destroy)
+        knopka2.config(text='вийти', command=root.destroy)
+
+    def Dota():
+        story_text.config(text='Тепер ти став використовувати \nсвої знання в злих цілях')
+        knopka1.config(text='Буду продовжати грати в доту', command=doota)
+        knopka2.config(text='Одуматися', command=skk)
+
+    def doota():
+        story_text.config(text='Ти зрісся зі свойм геймерським стульчаком\n GAME OVER')
+        knopka1.config(text='вийти', command=root.destroy)
+        knopka2.config(text='вийти', command=root.destroy)
+
+    def program():
+        story_text.config(text='Чудово тепер вибери школу')
+        knopka1.config(text='Justscool ', command=js)
+        knopka2.config(text='якась нн школа', command=SKAM)
+
+    def SKAM():
+        story_text.config(text='Тебе заскамили на гроші як мамонта')
+        knopka1.config(text='вийти', command=root.destroy)
+        knopka2.config(text='переграти', command=ggmenu)
+
+    def js():
+        story_text.config(text='Тобі попався хороший вчитель який навчав тебе програмуванню\n що будеш робити')
+        knopka1.config(text='зайду в доту', command=Dota)
+        knopka2.config(text='Знайду роботу', command=SKKK)
+
+    def SKKK():
+        story_text.config(text='ти Знайшов чудову роботу')
+        knopka1.config(text='УРААА!!', command=root.destroy)
+        knopka2.config(text='вийти', command=root.destroy)
+
+    story_text.config(text="Ти школяр перед яким йде вибір \nвчитися\n чи\n піти з пацаначи за гаражі\n що обореш", font=("Comic Sans MS", 16, ) )
+    knopka1.config(text='Піду за гаражі', command=garage, font=("Comic Sans MS", 16))
+    knopka2.config(text='Начну вчитися', command=sk, font=("Comic Sans MS", 16, ))
+
+
+
+def set_theme(theme):
+
+    if theme == "light":
+
+        root.config(bg='white')
+        story_text.config(bg='white', fg='black')
+        knopka1.config(bg='white', fg='black')
+        knopka2.config(bg='white', fg='black')
+    elif theme == "dark":
+
+        root.config(bg='black')
+        story_text.config(bg='black', fg='white')
+        knopka1.config(bg='white', fg='black')
+        knopka2.config(bg='white', fg='black')
+    elif theme == 'ua':
+        root.config(bg='blue')
+        story_text.config(bg='blue', fg='yellow')
+        knopka1.config(bg='yellow', fg='blue')
+        knopka2.config(bg='yellow', fg='blue')
+def set_button_fg(color):
+    story_text.config(fg=color)
+    knopka1.config(fg=color)
+    knopka2.config(fg=color)
+def set_button(color):
+    knopka1.config(bg=color)
+    knopka2.config(bg=color)
+
+def button(color):
+    story_text.config(bg=color)
+    root.config(bg=color)
+
+root = tk.Tk()
+root.title("projekt")
+root.geometry("1000x600")
+
+story_text = tk.Label(root, text="Обери історію в меню з верху", fg="black", font=("Georgia", 16))
+story_text.pack(pady=50)
+
+
+knopka1 = tk.Button(root, text='це просто болванка', font=("Times New Roman", 16))
+knopka1.pack(pady=10)
+
+knopka2 = tk.Button(root, text='це просто болванка', font=("Times New Roman", 16))
+knopka2.pack(pady=10)
+
+
+menubar = tk.Menu(root)
+theme_menu = tk.Menu(menubar, tearoff=0)
+
+theme_menu.add_command(label="Історія про Minecraft", command=mine)
+theme_menu.add_command(label="Історія про Dota 2", command=dota)
+theme_menu.add_command(label="Історія про програмування\n(повчальна)", command=program)
+theme_menu1 = tk.Menu(menubar, tearoff=0)
+theme_menu1.add_command(label="Світла тема", command=lambda: set_theme("light"))
+theme_menu1.add_command(label="Темна тема", command=lambda: set_theme("dark"))
+theme_menu1.add_command(label="UA тема", command=lambda: set_theme("ua"))
+menubar.add_cascade(label="Налаштування", menu=theme_menu1)
+theme_menu2 = tk.Menu(menubar, tearoff=0)
+theme_menu2.add_command(label='Чорний', command=lambda: set_button_fg('black'))
+theme_menu2.add_command(label='Білий', command=lambda: set_button_fg('white'))
+theme_menu2.add_command(label='Синій', command=lambda: set_button_fg('blue'))
+theme_menu2.add_command(label='Червоний', command=lambda: set_button_fg('red'))
+theme_menu2.add_command(label='жовтий', command=lambda: set_button_fg('yellow'))
+theme_menu2.add_command(label='Фіолетовий', command=lambda: set_button_fg('purple'))
+menubar.add_cascade(label="колір тексту", menu=theme_menu2)
+theme_menu3 = tk.Menu(menubar, tearoff=0)
+theme_menu3.add_command(label='Чорний', command=lambda: set_button('black'))
+theme_menu3.add_command(label='Білий', command=lambda: set_button('white'))
+theme_menu3.add_command(label='Синій', command=lambda: set_button('blue'))
+theme_menu3.add_command(label='Червоний', command=lambda: set_button('red'))
+theme_menu3.add_command(label='жовтий', command=lambda: set_button('yellow'))
+theme_menu3.add_command(label='Фіолетовий', command=lambda: set_button('purple'))
+menubar.add_cascade(label="колір кнопок", menu=theme_menu3)
+theme_menu4 = tk.Menu(menubar, tearoff=0)
+theme_menu4.add_command(label='Чорний', command=lambda: button('black'))
+theme_menu4.add_command(label='Білий', command=lambda: button('white'))
+theme_menu4.add_command(label='Синій', command=lambda: button('blue'))
+theme_menu4.add_command(label='Червоний', command=lambda: button('red'))
+theme_menu4.add_command(label='жовтий', command=lambda: button('yellow'))
+theme_menu4.add_command(label='Фіолетовий', command=lambda: button('purple'))
+menubar.add_cascade(label="колір вікна", menu=theme_menu4)
+
+
+
+menubar.add_cascade(label="   Історії   ", menu=theme_menu)
+root.config(menu=menubar)
+
+root.mainloop()
