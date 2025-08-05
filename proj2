@@ -1,4 +1,7 @@
 import tkinter as tk
+import random as r
+
+chachers = ['Anti-mage', 'Phantom Assassin', 'Juggernaut']
 
 
 
@@ -52,6 +55,7 @@ def mine():
     knopka2.config(text="Піду на право", command=pravo, font=("Times New Roman", 16, ))
 
 def dota():
+    wwwwwww = r.choice(chachers)
     def wiin():
         story_text.config(text='Ти успішно зламав трон ворогам')
         knopka1.config(text='вийти', command=root.destroy)
@@ -91,7 +95,7 @@ def dota():
 
     def am():
         story_text.config(
-            text='Тобі випав герой anti-mage, ти пішов на ізі лайн\n проти тебе попався лайн для крутих\n (вайпер и веник)')
+            text=f'Тобі випав герой {wwwwwww}, ти пішов на ізі лайн\n проти тебе попався лайн для крутих\n (вайпер и веник)')
         knopka1.config(text='піду фідити по міду', command=solo)
         knopka2.config(text='буду стояти лайн і фармити', command=am1)
 
@@ -271,6 +275,12 @@ theme_menu4.add_command(label='жовтий', command=lambda: button('yellow'))
 theme_menu4.add_command(label='Фіолетовий', command=lambda: button('purple'))
 menubar.add_cascade(label="колір вікна", menu=theme_menu4)
 
+
+
+menubar.add_cascade(label="   Історії   ", menu=theme_menu)
+root.config(menu=menubar)
+
+root.mainloop()
 
 
 menubar.add_cascade(label="   Історії   ", menu=theme_menu)
